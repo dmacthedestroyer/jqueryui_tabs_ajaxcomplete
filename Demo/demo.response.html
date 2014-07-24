@@ -1,3 +1,6 @@
+<p>The button below is being turned into a jQuery UI button in an external ajaxComplete call.  The problem is, there's a delay between when this remote tab request is processed and when the content gets added to the DOM.  This means my external ajaxComplete event fires before the content is loaded.</p>
+<p>I suppose it isn't technically a bug, since everything is working exactly as expected, and I should attach to a different event.  But, it was misleading at first, and pissed me off, so I started down this path of recreating to report as a bug.</p>
+<p>You can view the jsfiddle here: <a href="http://jsfiddle.net/YEa2x/">http://jsfiddle.net/YEa2x/</a></p>
 <p>This content was loaded at <span id="loadTime"></span><p>
 <p><button>This button needs to be styled in a call to ajaxcomplete</button></p>
 <script type="text/javascript">
